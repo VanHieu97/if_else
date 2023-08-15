@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="soA"> Số A!
+<br>
+<input type="text" id="soB"> Số B!
+<br>
+<input type="text" id="kq"> Số C!
+<br>
+<button onclick="ternaryOperator()" > Kiểm tra</button>
+<script>
+    function ternaryOperator() {
+        let sA = document.getElementById('soA').value;
+        let sB = document.getElementById('soB').value;
+        let sC = (sA + sB ) ? 'Below':'Over'
+        document.getElementById('kq').value = sC;
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="Use">Nhập tài khoản!
+<br>
+<input type="text" id="Pw"> Nhập Passwork!
+<br>
+<button onclick="kTra()">Kiểm tra</button>
+<button type="reset" onclick="del()"> Xóa</button>
+
+<script>
+    function kTra() {
+        let use = document.getElementById('Use').value;
+        let passWord = document.getElementById('Pw').value;
+        if(use === 'Admin'){
+            console.log("Nhập mật khẩu")
+            if(passWord === '123'){
+                console.log('Welcome');
+            }else if (passWord === ""){
+                console.log('Canceled');
+            }else {
+                console.log('Wrong password');
+            }
+        }
+        if( use === ""){
+           console.log('Canceled')
+        }
+        if (use === "" || use !=='Admin' && passWord === ""){
+            console.log('I dont know you')
+        }
+
+    }
+    function del() {
+        document.getElementById('Use').value = "";
+        document.getElementById('Pw').value = "";
+    }
+</script>
+</body>
+</html>

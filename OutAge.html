@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="age" style="width: 110px"> Nhập tuổi!
+<br>
+<input type="text" id="out" style="width: 110px"> Kết Quả!
+<br>
+<button onclick="Age()"> Kiểm tra</button>
+<button type="reset" onclick="del()"> Reset</button>
+<script>
+    function Age() {
+        let doTuoi = +document.getElementById('age').value;
+        if (doTuoi > 18) {
+            document.getElementById('out').value = "Đủ tuổi lấy vợ";
+        } else {
+            document.getElementById('out').value = "Chưa đủ tuổi lấy vợ";
+        }
+    }
+
+    function del() {
+        document.getElementById('age').value = "";
+        document.getElementById('out').value = "";
+    }
+</script>
+<hr>
+<hr>
+<hr>
+<input type="text" id="number"> Nhập vào số!
+<br>
+<input type="text" id="kq"> Kết quả!
+<br>
+<button onclick="evenNumber()">Kiểm tra</button>
+<button type="reset" onclick="del1()"> Reset</button>
+<script>
+    function evenNumber() {
+        let number = +document.getElementById('number').value;
+        if (number % 2 === 0) {
+            document.getElementById('kq').value = number + " " + "Là số chẵn";
+        } else {
+            document.getElementById('kq').value = number + " " + " Là số lẻ";
+        }
+    }
+
+    function del1() {
+        document.getElementById('number').value = "";
+        document.getElementById('kq').value = "";
+    }
+</script>
+<hr>
+<hr>
+<hr>
+<input type="text" id="so1" oninput="layDulieu()">Số A!
+<br>
+<input type="text" id="so2" oninput="layDulieu()">Số B!
+<br>
+<input type="text" id="giaTri">Kết Quả!
+<br>
+<button onclick="tinhToan()"> Kiểm tra giá trị</button>
+<button type="reset" onclick="del2()"> Trở Lại</button>
+<script>
+    let a = "";
+    let b = "";
+
+    function layDulieu() {
+        a = +document.getElementById('so1').value;
+        b = +document.getElementById('so2').value;
+        console.log(a);
+        console.log(b);
+    }
+
+    function tinhToan() {
+
+        if (a > b) {
+            document.getElementById('giaTri').value = a + b;
+        } else if (a < b) {
+            document.getElementById('giaTri').value = a - b;
+        } else {
+            document.getElementById('giaTri').value = " Nhập ngu vch";
+        }
+    }
+
+    function del2() {
+        document.getElementById('so1').value = "";
+        document.getElementById('so2').value = "";
+        document.getElementById('giaTri').value = "";
+        a = "";
+        b = "";
+        console.log(a);
+        console.log(b)
+    }
+</script>
+<hr>
+<hr>
+<hr>
+<input type="text" id="soA" oninput="layData()"> Nhập số A!
+<br>
+<input type="text" id="soB" oninput="layData()"> Nhập số B!
+<br>
+<input type="text" id="soC" oninput="layData()"> Nhập số C!
+<br>
+<input type="text" readonly id="SoL"> Số Lớn Nhất!
+<br>
+<button onclick="compare()">Kiểm tra!</button>
+<button type="reset" onclick="del3()">Xóa!</button>
+<script>
+    let A = "";
+    let B = "";
+    let C = "";
+
+    function layData() {
+        A = +document.getElementById('soA').value;
+        B = +document.getElementById('soB').value;
+        C = +document.getElementById('soC').value;
+        console.log(A);
+        console.log(B);
+        console.log(C);
+    }
+
+    function compare() {
+        if (A > B && A > C) {
+            document.getElementById('SoL').value = A + " " + "Là số lớn nhất!";
+        } else if (B > A && B > C) {
+            document.getElementById('SoL').value = B + " " + "là số lớn nhất!";
+        } else {
+            document.getElementById('SoL').value = C + " " + " Là số lớn nhất!";
+        }
+    }
+
+    function del3() {
+        document.getElementById('soA').value = "";
+        document.getElementById('soB').value = "";
+        document.getElementById('soC').value = "";
+        document.getElementById('SoL').value = "";
+        A = "";
+        B = "";
+        C = "";
+    }
+</script>
+
+</body>
+</html>

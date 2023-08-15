@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" value="What is the “official” name of JavaScript?”" style="width: 300px">
+<br>
+<input type="text" id="trLoi"> Nhập vào câu trả lời!
+<br>
+<input type="text" id="kq"> Kết Quả!
+<br>
+<br>
+<button onclick="test()"> Kiểm tra câu trả lời</button>
+<button onclick="del()"> Xóa câu trả lời</button>
+<script>
+  function test() {
+    let MK = document.getElementById('trLoi').value;
+    console.log(MK);
+    if(MK === 'ECMAScript'){
+    document.getElementById('kq').value = "Right"
+    }else {
+      document.getElementById('kq').value = "Didn’t know? ECMAScript!";
+    }
+  }
+  function del() {
+    document.getElementById('trLoi').value = "";
+    document.getElementById('kq').value = "";
+  }
+</script>
+</body>
+</html>

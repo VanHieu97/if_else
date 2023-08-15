@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="soNam"> Nhập số năm!
+<br>
+<input type="text" id="G"> Kết Quả!
+<br>
+<button onclick="year()"> Kiểm tra!</button>
+<button type="reset" onclick="del()">Xóa</button>
+<script>
+    function year() {
+        let Nam = +document.getElementById('soNam').value;
+        console.log(Nam);
+        if (Nam % 4 === 0) {
+            if (Nam % 100 === 0) {
+                if (Nam % 400 === 0) {
+                    document.getElementById('G').value = "Là năm nhuận";
+                } else {
+                    document.getElementById('G').value = "Không phải  năm nhuận";
+                }
+            } else {document.getElementById('G').value = "Là năm nhuận";
+            }
+        }else { document.getElementById('G').value = "không phải là năm nhuận"};
+    }
+    function del() {
+        document.getElementById('soNam').value = "";
+        document.getElementById('G').value = "";
+    }
+</script>
+</body>
+</html>

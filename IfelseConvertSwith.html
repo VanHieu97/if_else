@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="age"> Nhập tìm kiếm!
+<br>
+<input type="text" id="true"> Kết quả tìm kiếm!
+<br>
+<button onclick="kiemTra()">Kiểm tra</button>
+<button onclick="kiemTra1()">Kiểm tra</button>
+<button onclick="kiemTra2()">Kiểm tra</button>
+<script>
+    function kiemTra() {
+         let browser = document.getElementById('age').value;
+        console.log( browser)
+         switch(browser) {
+            case 'Edge':
+                document.getElementById('true').value = browser + 'You the Edge!'
+                break;
+            case'Chrome':
+                document.getElementById('true').value = browser + 'You ve got the Edge!';
+                break;
+            case'FireFox':
+                document.getElementById('true').value = browser + 'You ve got the Edge!';
+                break;
+            case'Safari':
+                document.getElementById('true').value = browser + 'You ve got the Edge!';
+                break;
+            case'Opera':
+                document.getElementById('true').value = browser + 'You ve got the Edge!';
+                break;
+            default:
+                document.getElementById('true').value = browser + '\'We hope that this page looks ok!\'';
+
+        }
+    }
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
